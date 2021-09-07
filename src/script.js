@@ -1,7 +1,7 @@
 async function RandomIdea() {
   try {
     const data = [
-      ...new Set(await fetch("ideas.json").then((res) => res.json())),
+      ...new Set(await fetch("./src/ideas.json").then((res) => res.json())),
     ];
     return data[Math.floor(Math.random() * data.length)];
   } catch (e) {
